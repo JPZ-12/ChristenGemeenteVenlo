@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 900" role="img" aria-label="Rustige kerkruimte">
+  <rect width="1600" height="900" fill="#31483d"/>
+  <path d="M0 650h1600v250H0z" fill="#7b5f3d"/>
+  <path d="M1110 0h360v900h-360z" fill="#efe6d3" opacity=".16"/>
+  <path d="M1170 70h95v360h-95zM1315 70h95v360h-95z" fill="#fffaf1" opacity=".72"/>
+  <path d="M1040 515h450v86h-450zM1000 590h520v48h-520z" fill="#b47b43"/>
+  <path d="M1050 635h34v170h-34zM1450 635h34v170h-34z" fill="#5a3f2b"/>
+  <path d="M720 565c80-40 185-40 265 0v140H720z" fill="#c9954a"/>
+  <path d="M760 590h225v125H760z" fill="#8a6139"/>
+  <path d="M830 545c40-40 88-40 128 0" fill="none" stroke="#fffaf1" stroke-width="12" stroke-linecap="round" opacity=".72"/>
+  <path d="M150 580h420v80H150zM120 655h480v40H120z" fill="#9f6c3c"/>
+  <path d="M160 690h34v118h-34zM540 690h34v118h-34z" fill="#4d3829"/>
+  <circle cx="960" cy="485" r="58" fill="#78947b"/>
+  <path d="M960 565V455M915 500c52-15 78-42 94-82M1008 505c-42-8-68-31-92-69" fill="none" stroke="#d7d0c0" stroke-width="8" stroke-linecap="round"/>
+  <path d="M0 0h1600v900H0z" fill="url(#warm)"/>
+  <defs>
+    <linearGradient id="warm" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0" stop-color="#17201b" stop-opacity=".78"/>
+      <stop offset=".52" stop-color="#17201b" stop-opacity=".18"/>
+      <stop offset="1" stop-color="#c9954a" stop-opacity=".16"/>
+    </linearGradient>
+  </defs>
+</svg>
