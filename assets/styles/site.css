@@ -1,0 +1,228 @@
+:root {
+  color-scheme: light;
+  --ink: #f7f4ec;
+  --muted: #d7d0c0;
+  --deep: #17201b;
+  --leaf: #31483d;
+  --leaf-soft: #78947b;
+  --paper: #fffaf1;
+  --gold: #c9954a;
+  --shadow: rgba(13, 18, 15, 0.42);
+  font-family:
+    Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+    sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  min-height: 100%;
+  background: var(--deep);
+}
+
+body {
+  min-height: 100vh;
+  margin: 0;
+  background: var(--deep);
+  color: var(--ink);
+}
+
+body::selection {
+  background: var(--gold);
+  color: var(--deep);
+}
+
+.site-shell {
+  min-height: calc(100vh - 64px);
+}
+
+.hero {
+  position: relative;
+  display: grid;
+  min-height: calc(100vh - 64px);
+  overflow: hidden;
+  isolation: isolate;
+  background:
+    linear-gradient(90deg, rgba(18, 25, 21, 0.98) 0%, rgba(18, 25, 21, 0.88) 36%, rgba(18, 25, 21, 0.5) 72%),
+    url("../images/hero-quiet-space.svg") center / cover no-repeat,
+    #17201b;
+}
+
+.hero__visual,
+.hero__shade {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.hero__visual {
+  z-index: -2;
+  background:
+    radial-gradient(circle at 74% 28%, rgba(247, 244, 236, 0.24), transparent 28%),
+    radial-gradient(circle at 84% 78%, rgba(201, 149, 74, 0.2), transparent 20%);
+  mix-blend-mode: screen;
+}
+
+.hero__shade {
+  z-index: -1;
+  background:
+    linear-gradient(90deg, rgba(18, 25, 21, 0.84) 0%, rgba(18, 25, 21, 0.58) 34%, rgba(18, 25, 21, 0.18) 72%),
+    linear-gradient(0deg, rgba(18, 25, 21, 0.55) 0%, rgba(18, 25, 21, 0.08) 42%);
+}
+
+.hero__content {
+  align-self: center;
+  width: min(100% - 40px, 720px);
+  margin-inline: max(20px, calc((100vw - 1160px) / 2));
+  padding-block: 64px;
+}
+
+.kicker {
+  margin: 0 0 18px;
+  color: var(--muted);
+  font-size: 0.92rem;
+  font-weight: 700;
+  letter-spacing: 0;
+  text-transform: uppercase;
+}
+
+h1 {
+  max-width: 680px;
+  margin: 0;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: clamp(2.75rem, 8vw, 6.5rem);
+  font-weight: 700;
+  line-height: 0.94;
+  letter-spacing: 0;
+}
+
+.intro {
+  max-width: 590px;
+  margin: 28px 0 0;
+  color: var(--muted);
+  font-size: clamp(1.05rem, 2vw, 1.28rem);
+  line-height: 1.65;
+}
+
+.status-bar {
+  display: inline-flex;
+  align-items: center;
+  min-height: 44px;
+  margin-top: 34px;
+  padding: 0 18px;
+  border: 1px solid rgba(247, 244, 236, 0.28);
+  border-radius: 999px;
+  background: rgba(23, 32, 27, 0.54);
+  box-shadow: 0 18px 50px var(--shadow);
+  color: var(--paper);
+  font-size: 0.96rem;
+  font-weight: 700;
+  gap: 10px;
+}
+
+.status-bar__dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: var(--gold);
+  box-shadow: 0 0 0 6px rgba(201, 149, 74, 0.2);
+}
+
+.contact-link {
+  display: block;
+  width: fit-content;
+  margin-top: 22px;
+  color: var(--ink);
+  font-weight: 700;
+  text-decoration-color: rgba(247, 244, 236, 0.52);
+  text-decoration-thickness: 2px;
+  text-underline-offset: 6px;
+}
+
+.contact-link:hover,
+.contact-link:focus-visible {
+  color: var(--paper);
+  text-decoration-color: var(--gold);
+}
+
+.contact-link:focus-visible {
+  outline: 3px solid var(--gold);
+  outline-offset: 6px;
+}
+
+.site-footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 64px;
+  padding: 16px 20px;
+  background: #111814;
+  color: #c7c0b0;
+  font-size: 0.9rem;
+  gap: 12px;
+  text-align: center;
+}
+
+.site-footer__divider {
+  width: 4px;
+  height: 4px;
+  border-radius: 50%;
+  background: var(--leaf-soft);
+}
+
+@media (max-width: 720px) {
+  .site-shell,
+  .hero {
+    min-height: calc(100vh - 88px);
+  }
+
+  .hero__shade {
+    background:
+      linear-gradient(90deg, rgba(18, 25, 21, 0.95), rgba(18, 25, 21, 0.7)),
+      linear-gradient(0deg, rgba(18, 25, 21, 0.55), rgba(18, 25, 21, 0.12));
+  }
+
+  .hero__content {
+    width: min(100% - 32px, 560px);
+    padding-block: 48px;
+  }
+
+  h1 {
+    max-width: 10ch;
+    font-size: clamp(2.55rem, 13vw, 4.2rem);
+  }
+
+  .intro {
+    max-width: 32rem;
+  }
+
+  .site-footer {
+    min-height: 88px;
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .site-footer__divider {
+    display: none;
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .status-bar__dot {
+    animation: pulse 2.6s ease-in-out infinite;
+  }
+}
+
+@keyframes pulse {
+  0%,
+  100% {
+    box-shadow: 0 0 0 5px rgba(201, 149, 74, 0.16);
+  }
+
+  50% {
+    box-shadow: 0 0 0 9px rgba(201, 149, 74, 0.08);
+  }
+}
